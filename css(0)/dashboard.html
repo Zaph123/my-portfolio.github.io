@@ -1,0 +1,247 @@
+   
+
+   <!--<?php 
+   require_once "includes/config_session.inc.php";
+   require_once "includes/signup_view.inc.php";
+   require_once "includes/coupon_view.inc.php";
+   
+  ?>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css(0)/all.css">
+<link rel="stylesheet" href="dashboard.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <style>
+   
+  </style>
+   </head>
+<body>
+   <a href="#top" id="topp"><i class="fa-solid fa-angle-up"></i></a>
+    <a href="#rights" id="bott"><i class="fa-solid fa-angle-down"></i></a>
+   <header  id="header" >
+   <div class="head">
+  <a href="profile.html" id="profile"><i class="fa-solid fa-user"></i></a>
+  
+  <div id="menu">
+   <span id="closenav">&times</span>
+   <a href="fancard.html" class="items" >Profile</a>
+   <form action="index(1).html" method="post" id="logoutform">
+   <button type="submit">Log out</button>
+   </form>
+   <a href="dashboard.html" class="items"> Dashboard</a>
+    <a href="signup.html" class="items"> Signup</a>
+  </div>
+  <!-- <img src="dash_pic.png" id="bgimg">-->
+   <!--<h3>Welcome to</h3>
+   <h1> Fans based Team </h1>-->
+    <div class="parent_bar" id="open">
+     <span class="bars one"></span>
+      <span class="bars two"></span>
+       <span class="bars three"></span>
+    </div>
+   </div>
+   <h2> Your Dashboard</h2>
+   </header>
+   <main>
+   
+   <div class="about">
+   
+   <div class="svg">
+   <div class="container">
+   <div class="span one"></div>
+   <div class="span two"></div>
+   <div class="span three"></div>
+   </div>
+    <div class="face"></div>
+    </div>
+    <h1>Welcome Einstein<!--<?php
+      echo $_SESSION["username"]
+        ?>--></h1>
+   <div class="info"> <a href="profile.php" ><span class="view_profile">view profile</span></a>
+   <hr>
+   <a href="https://wa.me/2349022761407?text=Hello%20can%20I%20get%20my%20coupon%20code" ><span class="access_pin">Get Coupon</span></a>
+    </div>
+   </div>
+  <div class="couponform">
+    <form action="includes/coupon.inc.php" method="post">
+     <!-- <?php
+    check_coupon_errors();
+      ?>-->
+    <label class="user_info"><br><input type="text" id="coupon" value="" name="coupon" placeholder="Place coupon code here"></label>
+    <button type="submit">Submit</button>
+    </form>
+   </div>
+   
+   </main>
+  
+    <section class="fun">
+    <h1>Get busy, Explore</h1>
+    <div class="parent">
+    <div class="container">
+    <div class="child music">
+     <p> music trends</p>
+     <img src="headphone.jpg">
+    </div>
+    </div>
+    <div class="container">
+    <div class="child trends">
+    <img src="relax.jpg">
+    <p> music trends</p>
+    </div>
+    </div>
+    <div class="container">
+    <div class="child news">
+    <img src="bulb.jpg">
+    <p> music trends</p>
+    </div>
+    </div>
+    </div>
+    </section>
+  <footer>
+  <h1 id="foot_h1">Fan Based Team</h1>
+  <div class="question">
+  <h3 id="quest_h3" >Do you have any question?</h2>
+  <p id="quest_p">Give us a message</p>
+  <form action="includes/comments.inc.php" method="post" id="disappear">
+    <input type="email" id="email" placeholder="example@gmail.com" required="required" name="email" >
+    <textarea name="comment" rows="4" cols="50" placeholder="Enter message..." required="required" ></textarea>
+    <input type="submit" value="Submit">
+    </form>
+  </div>
+  <div class="mediaicons">
+  <a href="https://www.facebook.com/profile.php?id=100093492969176" ><i class="fa-brands fa-facebook"></i></a>
+ <a href="https://wa.me/2349022761407?text=Hello%20can%20I%20get%20my%20coupon%20code" > <i class="fa-brands fa-whatsapp"></i></a>
+  
+  <i class="fa-brands fa-instagram"></i>
+ <a href="https://vm.tiktok.com/ZMjfmNqoE/" > <i class="fa-brands fa-tiktok"></i></a>
+  </div>
+  <div class="copyrights" id="rights">copyrights©2023</div>
+  </footer> 
+</body>
+</html>
+<script type="text/javascript">
+   document.onclick = function(e){
+    if(e.target.id !== "closenav" && e.target.id !== "open"){
+      menu.style.width = "";
+    }
+  }
+
+    let opennav = document.getElementById("open")
+    opennav.onclick = function(){
+    let menu = document.getElementById("menu")
+    menu.style.width = "50%";
+    }
+    
+    let close_nav = document.getElementById("closenav");
+    close_nav.onclick = function(){
+    let menu = document.getElementById("menu")
+    menu.style.width = 0;
+    }
+    
+    let item = document.getElementsByClassName("items")[0];
+    item.onclick = function(){
+    let menu = document.getElementById("menu")
+    menu.style.height = "0px";
+    }
+    let item1 = document.getElementsByClassName("items")[1];
+    item1.onclick = function(){
+    let menu = document.getElementById("menu")
+    menu.style.height = "0px";
+    }
+    
+    
+    function printDiv(divName) {
+    var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
+    
+    document.body.innerHTML = printContents;
+    
+    window.print();
+    
+    document.body.innerHTML = originalContents;
+    }
+    
+   
+    function download() {
+    var a = document.body.appendChild(
+    document.createElement("a")
+    );
+    a.download = "newfile.html";
+    a.href = "data:text/html," + document.getElementById("content").innerHTML;
+    a.click(); //Trigger a click on the element
+    }
+    let dis_app = document.querySelector("#disappear");
+    let dis_app1 = document.querySelector("#foot_h1");
+    let qh3 = document.querySelector("#quest_h3");
+    let qp= document.querySelector("#quest_p");
+    window.addEventListener("scroll", () => {
+    if(document.body.scrollTop > 900|| document.documentElement.scrollTop > 900){
+    dis_app.style.opacity = 1;
+    dis_app.style.transform = "translateY(0)";
+    dis_app1.style.transform = "translateY(0)";
+    dis_app1.style.opacity = 1;
+    dis_app1.style.transitionDelay = "0s";
+    dis_app.style.transitionDelay = "0.3s";
+    qh3.style.transitionDelay = "0.1s";
+    qp.style.transitionDelay = "0.2s";
+    qh3.style.opacity = 1;
+    qp.style.opacity = 1;
+    qh3.style.transform = "translateY(0)";
+    qp.style.transform = "translate(0)"
+    }
+    /* else if(document.body.scrollTop > 700 || document.documentElement.scrollTop > 700){
+    dis_app1.style.transform = "translateY(0)";
+    dis_app1.style.opacity = 1;
+    dis_app1.style.transitionDelay = 0;
+    }*/
+    else{
+    dis_app.style.opacity = 0;
+    dis_app.style.transform = "translateY(20px)";
+    dis_app1.style.transform = "translateY(20px)";
+    dis_app1.style.opacity = 0;
+    dis_app1.style.transitionDelay = "0.3s";
+    dis_app.style.transitionDelay = "0s";
+    qh3.style.transitionDelay = "0.2s";
+    qp.style.transitionDelay = "0.1s";
+    qh3.style.transform = "translateY(20px)";
+    qp.style.transform = "translateY(20px)";
+    qh3.style.opacity = 0;
+    qp.style.opacity = 0;
+    }
+    })
+    
+    let toppage = document.getElementById("topp");
+    let botpage = document.getElementById("bott");
+    window.addEventListener("scroll", function() {
+    if(document.body.scrollTop > 800 || document.documentElement.scrollTop > 800){
+    toppage.style.opacity = 1;
+    botpage.style.opacity = 0
+    }
+    else{
+    toppage.style.opacity = 0;
+    botpage.style.opacity = 1
+    }
+    })
+    
+    window.addEventListener("scroll", function() {
+    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+    botpage.style.opacity = 0;
+    }
+    else{
+    botpage.style.opacity = 1 ;
+    }
+    })
+    
+    $(document).ready(function(){
+     $("#open").click(function(){
+      $("#menu").css("width", "60%")
+     })
+    })
+    
+</script>

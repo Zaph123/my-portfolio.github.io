@@ -1,0 +1,588 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Poppins&family=Young+Serif&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box;
+  font-family: "Poppins", "Young Serif", times;
+  font-weight: bold;
+ }
+ /*html{
+  scroll-behaviour: smooth;
+ }*/
+ html{
+ scroll-behavior: smooth;
+ }
+ body {
+  background: #f2f2f2;
+ }
+ span,i{
+  cursor: pointer;
+ }
+ p,h1,h2,h3 {
+  cursor: default;
+ }
+ .head #menu {
+ position: fixed;
+ top: 0;
+ right: 0;
+ width: 100%;
+ height: 0;
+ background: #000;
+ display: flex;
+ flex-direction: column;
+ padding: 0px;
+ justify-content: ;
+ align-items: center;
+ display: ;
+ z-index: 100;
+ overflow: hidden;
+ transition: 0.5s;
+ }
+ #menu span {
+ position:absolute;
+ top: 5px;
+ left: 30px;
+ font-size: 50px;
+ z-index: 30;
+ color: #fff;
+ }
+ #menu a {
+ text-decoration: none;
+ color: #fff;
+ width: 60%;
+ text-align: center;
+ padding: 15px 10px;
+ margin: 5px 0;
+ transition: all 0.3s;
+ border-radius: 10px;
+ }
+ #menu a:hover{
+  background: rgba(255,255,255,0.3);
+  transform: scale(0.95);
+ }
+ .head .calls {
+   position: absolute;
+   right: 0px;
+   top: 10px;
+   width: 100px;
+   height: 150px;
+   background: ;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: column;
+   }
+   .head .calltoaction {
+   text-decoration: none; 
+   padding: 10px;
+   background: #000;
+   order: 1;
+   color: #fb7000;
+   border-radius: 10px;
+   font-weight: bold;
+   text-transform:capitalize;
+   border: 2px solid black;
+   
+   }
+   
+   .head .calls .fa-bars {
+   color: #fb7000;
+   font-size: 30px;
+   background: black;
+   padding: 10px;
+   border-radius: 10px;
+   z-index: 1;
+   }
+ .head {
+ padding: 10px;
+ z-index: 1;
+ position:relative;
+ height: 450px;
+ }
+ .head h3 {
+    text-transform: capitalize;
+    color: white;
+    padding: 20px 0 0 0;
+    font-size: 25px;
+}
+ 
+ .head h1{
+  font-size: max(5vh, 80px);
+    text-transform: uppercase;
+    width: auto;
+    text-align: center;
+    background: ;
+    padding: 10px;
+    color: #fff;
+    height: 100%;
+    letter-spacing: 5px;
+    font-family: "young serif";
+ }
+ .head .slides {
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ z-index: -1;
+ 
+ }
+ .head .slides .myslides{
+  position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
+ transition: 0.5s;
+ display: block;
+ }
+
+ #loglink{
+  color: #fff;
+  margin: 0 auto;
+ }
+ .log{
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  border-radius: 10px;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  transition: 2.5s;
+ }
+ .log .link_items {
+  padding: 10px;
+  background: #000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  animation: grow 2.5s linear infinite;
+  transform: scale(0.8);
+ }
+ @keyframes grow {
+  from{
+    transform: scale(0.8);
+  }
+  to{
+    transform: scale(1);
+  }
+ }
+ .log:hover {
+  animation: beat 0.5s 1;
+ }
+  @keyframes grow {
+  from{
+    transform: scale(0.9);
+  }
+  to{
+    transform: scale(1);
+  }
+ }
+ main {
+ width: 100%;
+ height: auto;
+ background: #fff;
+ padding: ;
+ overflow: hidden;
+ z-index: ;
+ margin:;
+ }
+ .form{
+  padding: 10px 10px;
+  width: 100%;
+  position: relative; 
+ }
+ .form .signin_img{
+  width: 100%;
+  background: ;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .form .signin_img img{
+  width: 100%;
+  max-width: 500px;
+ }
+ .form h1 {
+ text-align:center;
+ padding: 10px;
+ text-transform:capitalize;
+ color: ;
+ }
+  .form form {
+  width: 100%;
+  height: auto;
+  background: ;
+  margin: 0 auto;
+  padding: 30px ;
+  border-radius: 20px
+  visibility: hidden;
+  transition: all 0.9s;
+  opacity: 1;
+  position:relative;
+  left: 400px;
+  color: ;
+  }
+  
+  .form label{
+   font-size: 19px;
+   display: block;
+   padding: 20px 10px 0 0;
+   color: ;
+  }
+ .form form input {
+  display:block;
+  height: 50px;
+  width: 100%;
+  border: none;
+  /*border-top: none;
+  border-bottom: 2px solid #000;
+  border-right: none;
+  border-left: none;*/
+  background: #0d0d0d;
+  padding: 0 10px;
+  border-radius: 10px;
+  outline: none;
+  color: #fff;
+  font-size: 17px;
+  box-shadow: 0 3px 5px #000;
+  
+  }
+  .otherform-error{
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+  ::placeholder {
+   color: white;
+   opacity: 0.5;
+  }
+  input::focus {
+  background: ;
+  }
+  .form input[type="submit"]{
+   background: #fb7000;
+   border-radius: 10px;
+   position:relative;
+   top: ;
+   color: white;
+   cursor: pointer;
+   width: 200px;
+   margin: 0 auto;
+   transition: all 0.2s;
+  }
+  .form input[type="submit"]:hover{
+    transform: scale(0.95)
+
+  }
+  .form p{
+  position:relative;
+  top: ;
+  text-align: center;
+  }
+  .form p a {
+  color: purple;
+  text-decoration: none;
+  }
+  .passwd-cont{
+    position: relative;
+  }
+  .fa-eye, .fa-eye-slash {
+ position:absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 20px;
+  color: #fff;
+ }
+  .content {
+  padding: 10px 10px 20px 10px;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  }
+  .content p{
+  text-align: center;
+  background: black;
+  padding: 10px 0 10px 0;
+  color: white;
+  border-radius: 10px 10px;
+  }
+.content #signup{
+  color: #fff;
+  text-decoration: none;
+}
+
+  .content img{
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0 4px 5px black;
+  width: 100%;
+  border-radius: 10px;
+  margin: 0 auto;
+  }
+  footer {
+  height:700px;
+  width: 100%;
+  background: url("headphone.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 10px;
+  position:relative;
+
+  }
+  footer #foot_h1{
+  text-align: center;
+  transform:translateY(20px);
+  transition: 0.5s;
+  opacity: 0;
+  font-size: 40px;
+   
+  }
+   footer .question {
+   padding: 10px 0;
+   line-height: 60px;
+   }
+   .question h3 {
+   font-size: 25px;
+   transform:translateY(20px);
+   transition: 0.5s;
+   opacity: 0;
+   }
+   .question p {
+   font-size: 19px;
+   transform:translateY(20px);
+   transition: 0.5s;
+   opacity: 0;
+   }
+   footer .question form {
+   width: 100%; 
+   height: 350px;
+   line-height: 80px;
+   padding: 10px 10px;
+   box-shadow: 0 0px 5px rgba(255,255,255,0.2);
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   margin: 0 auto;
+   opacity: 0;
+   transition: 0.5s;
+   transform:translateY(20px);
+   transition-delay: ;
+   }
+    footer .question form input {
+    width: 100%;
+    height: 50px;
+    opacity: 0.5;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 5px;
+    outline: none;
+    font-size: 16px;
+    }
+     footer .question form input::placeholder {
+    color: black;
+    }
+ footer .question form textarea {
+  height: 200px;
+  overflow: auto;
+  width: 100%;
+  opacity: 0.5;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 5px;
+  outline: none;
+  font-size: 16px;
+  }
+  
+  footer .question form input[type="submit"]{
+  background: #fb7000;
+  opacity: 1;
+  color: white;
+  position:relative;
+  height:;
+  left: -70px;
+  width: 100px;
+  cursor: pointer;
+  }
+  
+
+ 
+  .mediaicons {
+   width: 100%;
+   max-width: 500px;
+   margin: 0 auto;
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   position:relative;
+   top: 20px;
+  }
+  .mediaicons .fa-brands {
+  font-size: 25px;
+  transition: all 0.5s;
+  } 
+  
+  .mediaicons .fa-brands:hover {
+  padding: 10px;
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.02);
+  transition: 0.5s;
+  border-radius: 10px;
+  }
+  .copyrights {
+  position:absolute;
+  bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  }
+  #topp{
+  z-index: 1000;
+  bottom: 130px;
+  position: fixed;
+  right: 10px;
+  font-size: 35px;
+  background: black;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+  }
+  #bott {
+  z-index: 1000;
+  top: 170px;
+  position: fixed;
+  right: 10px;
+  font-size: 35px;
+  background: black;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  opacity: 1;
+  transition: 0.5s;
+  }
+  .form-error{
+    height: 100px;
+    width: 200px;
+  }
+  @media screen and (min-width: 600px){
+    
+      footer .question form input{
+        height: 60px;
+        width: 300px;
+        font-size: 17px;
+      }
+      footer .question form{
+        height: 400px;
+      }
+      footer .question form textarea {
+        height: 200px;
+        width: 300px;
+        font-size: 17px;
+      }
+      footer .question form input[type="submit"]{
+        width: 150px;
+        height: 50px;
+        font-size: 20px;
+      }
+  }
+   @media screen and (max-width: 316px){
+    .head h1{
+      font-size: 60px;
+    }
+   }
+   @media screen and (min-width: 450px){
+           footer .question form{
+        height: 350px;
+        width: 400px;
+      }
+      .form form{
+        width: 400px;
+      }
+      footer {
+        height: 700px;
+      }
+  }
+      @media screen and (min-width: 597px) and (max-width: 886px){
+      .head {
+        height: 450px;
+      }
+      .head h1{
+        font-size: 100px;
+        width: 100%;
+        text-align: center;
+       margin-top: 10px;
+       line-height: 120px;
+      }
+    }
+     @media screen and (min-width: 790px){
+         .head #menu{
+          height: 50px;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+          width: 600px;
+          right: 0;
+          background: transparent;
+          padding: 10px 0 0 0;
+          
+         }
+         .head {
+          padding: 50px 0 0 0;
+         }
+         .head .calls{
+          display: none;
+         }
+         #menu span{
+          display: none;
+         }
+         #menu a{
+          width: 100px;
+          color: #fff;
+          background: black;
+          padding: 5px ;
+          text-align: center;
+          margin: 0;
+         }
+         #menu a:hover{
+          color: #03c;
+          background: #000;
+         }
+         .log{
+          left: -350px;
+         }
+     }
+    @media screen and (min-width: 886px) {
+      
+      .head {
+        height: 450px;
+      }
+      .content p{
+        font-size: 20px;
+      }
+      .head h1{
+        font-size: 125px;
+        width: 95%;
+        text-align: center;
+       margin: 0 auto;
+       line-height: 150px;
+       padding: 0 20px;
+      }
+    }
+ 

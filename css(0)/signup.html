@@ -1,0 +1,838 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <title>sign up</title>
+ <link rel="stylesheet" href="css(0)/all.css">
+ <link href="https://db.onlinewebfonts.com/c/2ceed2b4f181d097e939bae3b25109b4?family=MTN+Brighter+Sans+ExtraBold" rel="stylesheet">
+ <style type="text/css">
+ @import url('https://fonts.googleapis.com/css2?family=MTN Brighter Sans&family=DM Serif Display&family=Montserrat&family=Pacifico&family=Nosifer&family=Space Grotesk&family=Young Serif&family=Dela+Gothic+One&family=Perpetua1&family=Verdana:wght@200;300&family=Crimson+Pro:wght@200;300&family=Poppins:wght@300&family=Trirong:wght@300&display=swap');
+ @import url('https://db.onlinewebfonts.com/c/2ceed2b4f181d097e939bae3b25109b4?family=MTN+Brighter+Sans+ExtraBold');
+ :root {
+ --pcolor: #fff;
+ --scolor: #000;
+ --black: #0d0d0d;
+ --othercolor: #fb7000;
+ }
+ *{
+ padding: 0;
+ margin: 0;
+ box-sizing:border-box;
+ font-family: "MTN Brighter Sans ExtraBold","Young Serif","Space Grotesk", perpetua, times;
+ font-weight: bold;
+ letter-spacing: ;
+ } 
+ @font-face{
+ font-family: bright;
+ src: url(MTN Brighter Sans ExtraBold.ttf);
+ }
+   .dark-theme{
+   --pcolor: #000;
+   --scolor: #fff;
+   --black: #fff;
+   }
+   *{
+   padding: 0;
+   margin: 0;
+   box-sizing:border-box;
+   font-family: "Young Serif", times;
+   font-weight: bold;
+   } 
+   html{
+   scroll-behavior: smooth;
+   }
+   body {
+   background: var(--pcolor);
+   animation: scale 0.5s;
+   animation-iteration-count: 1;
+   transition: 0.5s;
+   position:relative;
+   position:relative; 
+   }
+   @keyframes scale {
+   0%{
+   transform: scale(1.2);
+   }
+   100%{
+   transform: scale(1);
+   }
+   }
+   .head #menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 0;
+   background: #000;
+   display: flex;
+   flex-direction: column;
+   padding: ;
+   justify-content: ;
+   align-items: center;
+   display: ;
+   z-index: 100;
+   overflow: hidden;
+   transition: 0.5s;
+   }
+   #menu span {
+   position:absolute;
+   top: 5px;
+   left: 30px;
+   font-size: 50px;
+   z-index: 30;
+   color: #fff;
+   }
+   #menu a {
+   text-decoration: none;
+   color: #fff;
+   width: 60%;
+   text-align: center;
+   padding: 15px 10px;
+   margin-top: 5px;
+   }
+  
+   .head .fa-bars {
+   position: absolute;
+   right: 30px;
+   top: 10px;
+   color: #fb7000;
+   font-size: 30px;
+   background: black;
+   padding: 10px;
+   border-radius: 10px;
+   z-index: 1;
+   }
+   .head {
+   padding: 10px;
+   z-index: 1;
+   position:relative;
+   height: 500px;
+   animation: zoom 0.5s 1;
+   }
+   @keyframes zoom {
+   0%{
+   transform: scale(0);
+   }
+   100%{
+   transform: scale(1);
+   }
+   }
+   .head h3 {
+   text-transform:capitalize;
+   color: white;
+   }
+   .head h1{
+   font-size: 70px;
+   text-transform:uppercase;
+   width: 80%;
+   text-align: left;
+   background: ;
+   padding: 10px;
+   color: #fff;
+   /*animation: zoom 0.5s 1;*/
+   }
+  /* @keyframes zoom {
+   0%{
+   transform: scale(0);
+   }
+   100%{
+   transform: scale(1);
+   }
+   }*/
+    .head img {
+   position:absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: -1;
+   object-fit: cover;
+   }
+    .form_container {
+    height: auto; 
+    padding: 30px 5px;
+    position:relative;
+    }
+    .form_container h1 {
+    text-transform:capitalize;
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 0 10px 0 10px;
+    text-align: center;
+    box-shadow: 0 3px 5px #000;
+    width: 300px;
+    margin: 0 auto;
+    }
+    .form_container img{
+    width: 100%;
+    }
+  #otherforms {
+    width: 100%;
+    height: 1000px;
+    background: var(--pcolor);
+    /*background: url("signup.jpg")no-repeat;
+    background-size: cover;*/
+    padding: 0px 30px 30px 30px;
+    display: block;
+    transition: ;
+    z-index: 1;
+    overflow: auto;
+    position: relative;
+    }
+    
+    #otherforms .label{
+    font-size: 19px;
+    display: block;
+    padding: 20px 10px 0 0;
+    color: var(--scolor);
+    }
+    .passwd-cont {
+    position:relative;
+    }
+    .fa-eye, .fa-eye-slash {
+    position:absolute;
+    right: 10px;
+    font-size: 20px;
+    top: 20px;
+    color: var(--pcolor);
+    }
+  #otherforms input {
+    display:block;
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    border-top: ;
+   border: none;
+    border-right: ;
+    border-left: ;
+    background: var(--black);
+    outline: none;
+    color: #fff;
+    font-size: 17px;
+    padding: 0 0 0 5px;
+    transition: ;
+    box-shadow: 0 3px 5px #000;
+    }
+    #otherforms input:hover{
+     border: 2px solid rgba(255,255,255,1);
+     transition: 0.3s;
+    }
+    ::placeholder {
+    color: var(--pcolor);
+    opacity: 0.5;
+    }
+    input::focus {
+    background: ;
+    }
+    #otherforms input[type="submit"]{
+    background: #fb7000;
+    border-radius: 10px;
+    position:relative;
+    top: 30px;
+    color: #000;
+    box-shadow: 0 3px 5px black;
+    font-size: 20px;
+    }
+    #otherforms input[type="submit"]:hover, .nation select:hover {
+    transform: scale(1.02);
+    }
+    #otherforms p{
+    position:relative;
+    top: 50px;
+    text-align: center;
+    }
+    #otherforms p a{
+    text-decoration: none;
+    color: red;
+    }
+    #otherforms #close {
+    position:absolute;
+    font-size: 50px;
+    top: -7px;
+    left: 17px;
+    }
+    #otherforms .gender {
+    width: 100%;
+    display: flex;
+    position:relative;
+    align-items: center;
+    background: ;
+    justify-content: space-between;
+    height: 50px;
+    font-size: 19px;
+    color: var(--scolor);
+    }
+    
+    #otherforms .gender .type {
+    display: flex;
+    width: 100px;
+    align-items: center;
+    font-size: 19px;
+    }
+    #otherforms .gender .type1{
+    display: flex;
+    align-items: center;
+    }
+  #otherforms .gender .type span {
+  font-size: 19px;
+  position: ;
+  }
+   #otherforms .gender .type input[type="radio"]  {
+  height: 30px;
+  width: 30px;
+  box-shadow: none;
+    }
+ #otherforms .gender .type1 input[type="radio"]  {
+ height: 30px;
+ width: 30px;
+ box-shadow: none;
+ }
+   .nation {
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   width: 240px;
+   background: ;
+   height: 50px;
+   }
+   .nation .country_name {
+   padding: 0 0 0 0;
+   font-size: 19px;
+   color: var(--scolor);
+   }
+   .nation select {
+   height: 40px;
+   font-size: 16px;
+   outline: none;
+   border-radius: 10px;
+   background: black;
+   color: white;
+   }
+   #otherforms input[type="date"]{
+   padding: 20px 0 0 0; 
+   color: #fff;
+   }
+   .modal img{
+   width: 100%;
+   object-fit: cover;
+   }
+   footer {
+   height: 600px;
+   width: 100%;
+   background: url("bulb.jpg")no-repeat;
+   background-size: cover;
+   background-position: center;
+   color: white;
+   padding: 10px;
+   position:relative;
+   }
+  footer #foot_h1{
+  text-align: center;
+  transform:translateY(20px);
+  transition: 0.5s;
+  opacity: 0;
+  font-size: 40px;
+  
+  }
+  footer .question {
+  padding: 10px 0;
+  line-height: 60px;
+  }
+  .question h3 {
+  font-size: 25px;
+  transform:translateY(20px);
+  transition: 0.5s;
+  opacity: 0;
+  }
+  .question p {
+  font-size: 19px;
+  transform:translateY(20px);
+  transition: 0.5s;
+  opacity: 0;
+  }
+  footer .question form {
+  width: 90%; 
+  height: 250px;
+  line-height: 80px;
+  padding: 10px 10px;
+  box-shadow: 0 0px 5px rgba(255,255,255,0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  opacity: 0;
+  transition: 0.5s;
+  transform:translateY(20px);
+  transition-delay: ;
+  }
+   footer .question form input {
+   width: 240px;
+   height: 50px;
+   opacity: 0.5;
+   border-radius: 10px;
+   border: none;
+   padding: 10px 5px;
+   outline: none;
+   }
+   footer .question form textarea {
+   height: 100px;
+   overflow: auto;
+   width: 240px;
+   opacity: 0.5;
+   border-radius: 10px;
+   border: none;
+   padding: 10px 5px;
+   outline: none;
+   }
+   
+   footer .question form input[type="submit"]{
+   background: #fb7000;
+   opacity: 1;
+   color: white;
+   position:relative;
+   height:;
+   left: -70px;
+   width: 100px;
+   font-size: 16px;
+   }
+   footer .question form input[type="submit"]:hover {
+   transform: scale(1.02);
+   }
+   
+   #test {
+   height: 0; 
+   width: 200px;
+   background: red;
+   transition: 0s;
+   text-align: center;
+   font-size: 18px;
+   text-transform:capitalize;
+   overflow: hidden;
+   display: block;
+   position:relative;
+   top: ;
+   }
+   .mediaicons {
+   width: 100%;
+   max-width: 500px;
+   margin: 0 auto;
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   position:relative;
+   top: 20px;
+   }
+  .mediaicons .fa-brands {
+  font-size: 25px;
+  transition: all 0.5s;
+  } 
+  
+  .mediaicons .fa-brands:hover {
+  padding: 10px;
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.02);
+  transition: 0.5s;
+  border-radius: 10px;
+  }
+   .copyrights {
+   position:absolute;
+   bottom: 10px;
+   font-size: 20px;
+   text-align: center;
+   left: 0;
+   right: 0;
+   }
+   #topp{
+   z-index: 900;
+   bottom: 100px;
+   position: fixed;
+   right: 10px;
+   font-size: 35px;
+   background: black;
+   padding: 10px;
+   border-radius: 10px;
+   color: #fff;
+   opacity: 1;
+   transition: 0.5s;
+  }
+  #bott {
+  z-index: 900;
+  top: 100px;
+  position: fixed;
+  right: 10px;
+  font-size: 35px;
+  background: black;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  opacity: 1;
+  transition: 0.5s;
+  }
+  #togglemode{
+  color: white;
+  position:absolute;
+  right: 40px;
+  bottom: 20px;
+  font-size: 30px;
+  }
+  #modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 999;
+  background: ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform:scale(0);
+  transition: 0.5s;
+  }
+  #modal .modal_contain {
+  width: 300px;
+  height: 600px;
+  background: brown;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: scroll;
+   box-shadow: 0 3px 5px #000;
+  flex-wrap: ;
+  }
+  .modal_contain p {
+  text-align: center;
+  padding: 10px;
+  color: var(--pcolor);
+  }
+  .modal_contain .modals{
+  flex-shrink: 0;
+  background: ;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  }
+  .modal_contain .modals img {
+  width: 100%;
+  object-fit: cover;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px #000;
+  }
+  .modal_contain .modals a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background: #fb7000;
+  border-radius: 10px;
+   box-shadow: 0 3px 5px #000;
+   color: #000;
+  }
+  #modal span {
+  font-size: 30px;
+  color: #000;
+  position:absolute;
+  top: 80px;
+  left: 40px;
+  padding: ;
+  }
+  </style>
+  </head>
+  <body>
+   <div id="modal">
+    <div class="modal_contain">
+     <span><i class="fa fa-times"></i> </span>
+    <p> Sorry to see Your dashboard you must first:</p>
+    <div class="modals"><img src="signin.jpg">
+    <a href="index(1).html" class="modal_btn" onclick="scale()">Log in</a></div>
+     <p> Or</p>
+      <div class="modals"><img src="signup1.jpg">
+      <a href="#otherforms" class="modal_btn" onclick="scale()"> Sign up </a></div>
+   </div>
+   </div>
+  <a href="#top" id="topp"><i class="fa-solid fa-angle-up"></i></a>
+   <a href="#rights" id="bott"><i class="fa-solid fa-angle-down"></i></a>
+  <header id="header">
+  <div class="head">
+  <div id="menu">
+  <span id="closenav">&times</span>
+  <a href="index(1).html" class="items" >Home</a>
+  <a href="index(1).html" class="items">Log in</a>
+  <a href="#"  class="items click"> Dashboard</a>
+  <a href="signup.html" class="items"> Signup</a>
+  </div>
+  <i class="fa-solid fa-bars" id="open"></i>
+  <img src="guitar.jpg">
+  <h3>Welcome to</h3>
+  <h1> Fans based Team </h1>
+  <div id="togglemode"><i class="fa-solid fa-moon" id="moon"> </i>
+  </div>
+  </header>
+
+
+<div class="form_container">
+<h1>Sign up here </h1>
+  <img src="signup1.jpg">
+  <form action="dashboard.html" id="otherforms" autocomplete="on" >
+  
+   <label for="fname" class="label">Firstname:</label>
+  <input type="text" id="fname" placeholder="Firstname" required autocomplete="on" >
+  <label for="lname" class="label">Lastname:</label>
+  <input type="text" id="lname" placeholder="Lastname" required>
+  <label for="email" class="label">Email:</label>
+  <input type="email" id="email" placeholder="example@gmail.com" required="required" >
+  <div for="gender" class="gender"><div>Gender:</div>
+  <div class="type">
+  <span>Male:</span>
+  <input type="radio" name="gender" id="gen">
+  </div>
+   <div class="type1">
+  <span>Female:</span>
+  <input type="radio" name="gender" id="gen1"  style="">
+  </div>
+  </div>
+  <label for="pass" class="label">Password:</label>
+  <div class="passwd-cont"><input type="password" id="pass" placeholder="........" required="required" > <span id="boss"><i class="fa-solid fa-eye" id="eye"></i></span></div>
+  <label for="cpass" class="label">Confirm Password:</label>
+  <div class="passwd-cont"><input type="password" id="cpass" placeholder="........" required="required" > <span id="boss1"><i class="fa-solid fa-eye" id="eye1"></i></span></div>
+  <div id="test"></div>
+   <div class="nation"><div for="nationality" class="country_name">Nationality: </div>
+  <select id="nationality" name="country" required="required" >
+  <option value="nig">Nigeria</option>
+  <option value="ghn">Ghana</option>
+  <option value="cam">Cameroon</option>
+  <option value="Chad">Chad</option>
+  </select>
+  </div>
+  <div class="nation"><div for="state" class="country_name">State: </div>
+  <select id="state" name="state" required="required" >
+  <option value="nig">Akwa Ibom</option>
+  <option value="ghn">Lagos</option>
+  <option value="cam">Calabar</option>
+  <option value="Chad">Abuja</option>
+  </select>
+  </div>
+  <label for="phone" class="label">Mobile Number:</label>
+  <input type="tel" id="phone" placeholder="14 digits with country code" required autocomplete="on" >
+  <label class="label">DOB:</label>
+  <input type="date" >
+  <input type="submit" value="Sign up" id="sub" onclick="gate()">
+  <p> Welcome to The Fans Based Team<br>
+  <a href="index(1).html" >Already have an account</a></p>
+   
+  </form>
+  </div>
+  
+    <footer>
+    <h1 id="foot_h1">Fan Based Team</h1>
+    <div class="question">
+    <h3 id="quest_h3" >Do you have any question?</h2>
+    <p id="quest_p">Give us a message</p>
+    <form action="" id="disappear">
+    <input type="email" id="email" placeholder="example@gmail.com" required="required" >
+    <textarea name="comment" rows="4" cols="50" placeholder="Enter message..." required="required" ></textarea>
+    <input type="submit" value="Submit">
+    </form>
+    </div>
+    <div class="mediaicons">
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-whatsapp"></i>
+    <i class="fa-brands fa-instagram"></i>
+   <a href="https://youtu.be/h0t4lveah44?si=WJD3ULVq4Pfo1nl2" > <i class="fa-brands fa-tiktok"></i></a>
+    </div>
+    <div class="copyrights" id="rights">copyrights©2023</div>
+    </footer> 
+  </body>
+  </html>
+  
+    <script type="text/javascript">
+       
+       let modal = document.querySelector("#modal");
+       let clickable = document.querySelector(".click");
+       let modalBtn = document.querySelector("#modal span");
+       let btn = document.getElementsByClassName("modal_btn")
+       clickable.onclick = () => {
+       modal.style.transform = "scale(1)";
+       let menu = document.getElementById("menu")
+       menu.style.height = "0px";
+       }
+       
+       modalBtn.onclick = () => {
+       modal.style.transform = "scale(0)";
+       }
+       
+       function scale() {
+       modal.style.transform = "scale(0)";
+       
+       }
+       
+     let darkmode = document.querySelector("#togglemode");
+     darkmode.onclick = () => {
+     document.body.classList.toggle("dark-theme");
+     if(document.body.classList.contains("dark-theme")){
+     document.querySelector("#moon").setAttribute("class", "fa-solid fa-sun")
+     }else{
+     document.querySelector("#moon").setAttribute("class", "fa-solid fa-moon")
+     }
+     }
+    
+    let opennav = document.getElementById("open")
+    opennav.onclick = function(){
+    let menu = document.getElementById("menu")
+    menu.style.height = "250px";
+    }
+   document.onclick = function(e){
+   if(e.target.id !== "closenav" && e.target.id !== "open"){
+   menu.style.height = "0";
+   }
+   }
+    let close_nav = document.getElementById("closenav");
+    close_nav.onclick = function(){
+    let menu = document.getElementById("menu")
+    menu.style.height = "0px";
+    }
+    
+    let item = document.getElementsByClassName("items")[0];
+    item.onclick = function(){
+    let menu = document.getElementById("menu")
+    menu.style.height = "0px";
+    }
+    let item1 = document.getElementsByClassName("items")[1];
+    item1.onclick = function(){
+    let menu = document.getElementById("menu")
+    menu.style.height = "0px";
+    }
+    
+    let passwd  = document.getElementById("pass");
+    let eye = document.getElementById("eye");
+    let  boss = document.getElementById("boss")
+    boss.addEventListener("click", () => {
+    /* passwd.type = passwd.type === "password" ? "text" : "password";
+    
+    this.classList.toggle("fa-eye")*/
+    if(passwd.type === "password"){
+    passwd.type = "text";
+    eye.setAttribute("class", "fa-solid fa-eye-slash")
+    }
+    else{
+    passwd.type = "password"
+    eye.setAttribute("class", "fa-solid fa-eye")
+    }
+    })
+    
+    
+    let eye_one = document.getElementById("eye1");
+   let  sboss = document.getElementById("boss1")
+   let cpasswd  = document.getElementById("cpass");
+    sboss.addEventListener("click", () => {
+    /* passwd.type = passwd.type === "password" ? "text" : "password";
+    
+    this.classList.toggle("fa-eye")*/
+    if(cpasswd.type === "password"){
+    cpasswd.type = "text";
+    eye_one.setAttribute("class", "fa-solid fa-eye-slash")
+    }
+    else{
+    cpasswd.type = "password"
+    eye_one.setAttribute("class", "fa-solid fa-eye")
+    }
+    })
+    
+   
+    let test = document.getElementById("test")
+     cpasswd.onmouseout = function() {
+      if(this.value === passwd.value){
+       console.log("true")
+      }
+      else{
+      test.style.height = "50px";
+      test.style.padding = "20px 0 0 0"
+      test.innerHTML = "wrong password"
+      }
+     }
+     cpasswd.onmouseenter = function() {
+      test.style.height = "";
+      test.style.padding = "0"
+     } 
+     
+     let box = document.getElementById("gen");
+     let box1 = document.getElementById("gen1");
+     function gate() {
+     if(box.checked === box1.checked){
+      console.log("wrong")
+     }
+     else if(box1.checked === box.checked){
+     alert("wrong")
+     }
+     else{
+      console.log("true")
+     }
+     }
+     
+     let dis_app = document.querySelector("#disappear");
+     let dis_app1 = document.querySelector("#foot_h1");
+     let qh3 = document.querySelector("#quest_h3");
+     let qp= document.querySelector("#quest_p");
+     window.addEventListener("scroll", () => {
+     if(document.body.scrollTop > 900|| document.documentElement.scrollTop > 900){
+     dis_app.style.opacity = 1;
+     dis_app.style.transform = "translateY(0)";
+     dis_app1.style.transform = "translateY(0)";
+     dis_app1.style.opacity = 1;
+     dis_app1.style.transitionDelay = "0s";
+     dis_app.style.transitionDelay = "0.3s";
+     qh3.style.transitionDelay = "0.1s";
+     qp.style.transitionDelay = "0.2s";
+     qh3.style.opacity = 1;
+     qp.style.opacity = 1;
+     qh3.style.transform = "translateY(0)";
+     qp.style.transform = "translate(0)"
+     }
+     /* else if(document.body.scrollTop > 700 || document.documentElement.scrollTop > 700){
+     dis_app1.style.transform = "translateY(0)";
+     dis_app1.style.opacity = 1;
+     dis_app1.style.transitionDelay = 0;
+     }*/
+     else{
+     dis_app.style.opacity = 0;
+     dis_app.style.transform = "translateY(20px)";
+     dis_app1.style.transform = "translateY(20px)";
+     dis_app1.style.opacity = 0;
+     dis_app1.style.transitionDelay = "0.3s";
+     dis_app.style.transitionDelay = "0s";
+     qh3.style.transitionDelay = "0.2s";
+     qp.style.transitionDelay = "0.1s";
+     qh3.style.transform = "translateY(20px)";
+     qp.style.transform = "translateY(20px)";
+     qh3.style.opacity = 0;
+     qp.style.opacity = 0;
+     }
+     })
+      
+     let toppage = document.getElementById("topp");
+     let botpage = document.getElementById("bott");
+      window.addEventListener("scroll", function() {
+      if(document.body.scrollTop > 800 || document.documentElement.scrollTop > 800){
+      toppage.style.visibility = "visible";
+      }
+      else{
+      toppage.style.visibility = "hidden";
+      }
+      })
+     
+     window.addEventListener("scroll", function() {
+     if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
+     botpage.style.visibility = "hidden";
+     }
+     else{
+     botpage.style.visibility = "visible";
+     }
+     })
+    </script>

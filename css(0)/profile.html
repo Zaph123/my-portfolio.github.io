@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>sign up</title>
+<link rel="stylesheet" href="css(0)/all.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style type="text/css">
+ @import url('https://fonts.googleapis.com/css2?family=Young Serif&family=Dela+Gothic+One&family=Perpetua:wght@200;300&family=Verdana:wght@200;300&family=Crimson+Pro:wght@200;300&family=Poppins:wght@300&family=Trirong:wght@300&display=swap');
+ :root{
+ --pcolor: #fff;
+ --scolor: #000;
+ --black: #0d0d0d;
+ --othercolor: #fb7000;
+ }
+ .dark-theme{
+ --pcolor: #000;
+ --scolor: #fff;
+ --black: #fff;
+ }
+ *{
+ padding: 0;
+ margin: 0;
+ box-sizing:border-box;
+ font-family: "Young Serif","perpetua", times;
+ font-weight: bold;
+ } 
+ html{
+ scroll-behavior: smooth;
+ }
+ body {
+ background: var(--pcolor);
+ animation: scale 0.5s;
+ animation-iteration-count: 1;
+ transition: 0.5s;
+ position: relative;
+ }
+ /*@keyframes scale {
+ 0%{
+ transform: scale(1.2);
+ }
+ 100%{
+ transform: scale(1);
+ }
+ }*/
+ .head img{
+ position:absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ z-index: -1;
+ height: 100%;
+ }
+ header{
+   position:relative;
+   }
+   .head {
+   padding: 10px;
+   z-index: 1;
+   height: 400px;
+   position: relative;
+   background: ;
+   width: 100%;
+   }
+   
+   .head h3 {
+   text-transform:capitalize;
+   color: white;
+   }
+   .head h1{
+   font-size: 60px;
+   text-transform:uppercase;
+   width: 100%;
+   text-align: left;
+   background: ;
+   padding: 10px;
+   color: #fff;
+   }
+   .head img{
+   position:absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: -1;
+   height: 100%;
+   max-width: 500px;
+   margin: 0 auto;
+   }
+  /* .head #bgimg {
+   position:absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: -1;
+   object-fit: cover;
+   max-width: 500px;
+   }*/
+   .head #setting_btn {
+   color: #fff;
+   text-decoration:none;
+   background: #000;
+   padding: 10px 20px;
+   border-radius: 10px;
+   position:relative;
+   top: 20px;
+  }
+  
+  header h2{
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  padding:10px;
+  text-transform:uppercase;
+  background: rgba(0,0,0,0.5);
+  box-shadow: 0 5px 5px black;
+ /* position:absolute;
+  right: 10px;
+  top: 10px;
+  transform:translate(110px,120px) rotate(90deg);*/
+  }
+  
+  .head #menu {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 300px;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0 0 0;
+  justify-content: ;
+  align-items: center;
+  display: ;
+  z-index: 100;
+  overflow: hidden;
+  transition: 0.5s;
+  }
+  #menu span {
+  position:absolute;
+  top: 5px;
+  left: 30px;
+  font-size: 50px;
+  z-index: 30;
+  color: #fff;
+  }
+  #menu a {
+  text-decoration: none;
+  color: #fff;
+  width: 60%;
+  text-align: center;
+  padding: 15px 10px;
+  border: ;
+  }
+  
+  .head .fa-bars {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  color: #fff;
+  font-size: 30px;
+  background: black;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1;
+  }
+ 
+  .head p {
+  font-size: 25px;
+  } 
+  
+  .profile {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  box-shadow: ;
+  border-radius: ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background: #29282c;
+ 
+  }
+  .profile img{
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   position:relative;
+   top: -70px;
+   z-index: 100;
+   transition: all 1.5s;
+  }
+  .profile .info{
+   width: 100%;
+   height: 350px;
+   max-width: 500px;
+   background: ;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: space-around;
+   margin: 0 auto;
+  }
+  .profile .info .user_info {
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  box-shadow: 0 3px 5px #000;
+  color: #fff;
+  background: #000;
+  height: ;
+  width: 100%;
+  max-width: 300px;
+  position:relative;
+  }
+  .profile .info .user_info input {
+  height: 50px;
+  width: 100%;
+  box-shadow: 0 3px 5px #000;
+  border-radius: 10px;
+  border: none;
+  font-size: 17px;
+  padding: 10px;
+  outline: none;
+  }
+  .profile .info .user_info span{
+  position:absolute;
+  top: 45px;
+  right: 30px;
+  color: black;
+  }
+  .profile .info button{
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px #000;
+  border: none;
+  margin: 0 auto;
+  background: #fb7000;
+  font-size: 17px;
+  outline: none;
+  transition: all 0.5s;
+  display: inline;
+  }
+  .profile .info button:hover {
+  border: 2px solid #fff;
+  transform: scale(1.06);
+  }
+  .profile p{
+  color: #fff;
+  position:relative;
+  top: -20px;
+  }
+  #settings{
+  width: 100%;
+  height: 300px;
+  padding: 20px 10px;
+  }
+  #settings h1{
+  background: black;
+  color: #fff;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 3px 5px #000;
+  }
+  
+  .changepwd{
+  height: auto;
+  width: 100%;
+  padding: 20px 5px;
+  background: #f2f2f2;
+  border-radius: 10px;
+  border-bottom: 5px solid black;
+  }
+  .changepwd h3{
+  padding: 10px;
+  font-size: 25px;
+  }
+  .changepwd form{
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  line-height: 70px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px #000;
+  overflow: hidden;
+  background: #0d0d0d;
+  }
+  .changepwd form input{
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid #0d0d0d;
+  box-shadow: 0 3px 5px #000;
+  font-size: 17px;
+  padding: 0 10px;
+  outline: none;
+  }
+  
+  .changepwd form input::placeholder{
+  font-size: 17px;
+  opacity: 0.5;
+  color: #000;
+  }
+  .changepwd form button {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  font-size: 17px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 3px 5px #000;
+  background: #fb7000;
+  outline: none;
+  transition: all 0.5s;
+  }
+  .changepwd form button:hover, .upload button:hover {
+  border: 2px solid #fff;
+   transform: scale(1.06);
+  }
+  formToggle{
+  height: 0;
+  }
+  .upload {
+   width: 100%;
+   position:relative;
+   top: -50px;
+   height: 50px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   }
+  .upload button{
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 3px 5px #000;
+  background: brown;
+  color: #000;
+  transition: all 0.5s;
+  }
+  .upload button:hover {
+  border: 2px solid #000;
+  transform: scale(1.06);
+  }
+/*  .row {
+  position:relative;
+  background: red;
+  height:300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  }
+  .row .parent{
+  background: blue;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  }
+  profile-pic {
+  width: 250px;
+  max-height: 250px;
+  display: ;
+  }
+  
+  .file-upload {
+  display: ;
+  }
+  .circle {
+  border-radius: 100% !important;
+  overflow: hidden;
+  width: 128px;
+  height: 128px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  position: ;
+  top: ;
+  background: yellow;
+  }
+  img {
+  max-width: 100%;
+  height: auto;
+  }
+  .p-image {
+  position: ;
+  color: red;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  }
+  .p-image:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  }
+  .upload-button {
+  font-size: 2.5em;
+  }
+  
+  .upload-button:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  color: #999;
+  }*/
+ </style>
+ </head>
+ <body>
+   <header id="header">
+    <div class="head">
+   <p>Hi, Einstein</p>
+   <a href="#settings" id="setting_btn">Settings</a>
+   <div id="menu">
+    <span id="closenav">&times</span>
+    <!--<a href="index(1).html" class="items" >Home</a>-->
+    <a href="index(1).html" class="items">Log out</a>
+    <a href="dashboard.html" class="items"> Dashboard</a>
+    <a href="signup.html" class="items"> Signup</a>
+    </div>
+    <i class="fa-solid fa-bars" id="open"></i>
+    <img src="privacy.webp">
+    <!--<h3>Welcome to</h3>
+    <h1> Fans based Team </h1>
+    <div id="togglemode"><i class="fa-solid fa-moon" id="moon"> </i></div>-->
+    </div>
+    </header>
+    
+    <main>
+     <div class="profile">
+     <img src="images.png">
+     <form class="upload" enctype="multipart/form-data" >
+     <input type="file" name="file">
+     <button type="submit">Change profile image</button>
+     </form>
+     <p class="date"></p>
+     <form method="post"  action="profile.html" class="info">
+     <label class="user_info">Username: <br><input type="text" id="uid" value="Einstein" name="username"  ><span id="pen1" >&#9998</span></label>
+     <label class="user_info">Email Address: <br><input type="email" id="email" value="bassey2108@gmail.com" name="email"><span id="pen2">&#9998</span></label>
+     <button type="submit">Save Changes</button>
+     <button type="reset">Reset Changes</button>
+     </form>
+     </div>
+     </main>
+   
+  <section id="settings">
+    <h1>Profile settings</h1><br>
+    <div class="changepwd">
+    <h3> Change Password</h3>
+    <form method="post" action="profile.html"  id="pwdForm">
+    <input type="password" id="pwd" placeholder="Current Password" >
+    <input type="password" id="New_pwd" placeholder="New Password" >
+    <input type="password" id="R_New_pwd" placeholder="Repeat New Password" >
+    <button type="submit">Submit</button>
+    </form>
+    </div>
+    </section>
+ 
+ 
+     <!--<div  class="row">
+     <div class="parent">
+     <div class="circle">
+     <!-- <img class="profile-pic" src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg">
+     <img class="profile-pic" src="head.jpg">
+     </div>
+     <div class="p-image">
+     <i class="fa fa-camera upload-button"></i>
+     <input class="file-upload" type="file" accept="image/*"/>
+     </div>
+     </div>
+     </div>-->
+ </body>
+ </html>
+ 
+ <script type="text/javascript">
+  
+  let pencil1 = document.querySelector(".user_info #pen1");
+  let pencil2 = document.querySelector(".user_info #pen2");
+  let input1 = document.querySelector(".user_info #uid");
+  let input2 = document.querySelector(".user_info #email");
+  
+  input1.onfocus = () => {
+  pencil1.style.display = "none";
+  }
+  input2.onfocus = () => {
+  pencil2.style.display = "none";
+  }
+  input1.onblur = () => {
+  pencil1.style.display = "";
+  }
+  input2.onblur = () => {
+  pencil2.style.display = "";
+  }
+  
+  /*let toggle = document.querySelector(".changepwd h3")
+  let pwd_form = document.querySelector("#pwdForm");
+  toggle.onclick = function() {
+   pwd_form.style.height = "0";
+  }*/
+ $(document).ready(function(){
+ $(".changepwd h3").click(function(){
+   $("#pwdForm").toggle();
+ });
+ });
+  const cdate = new Date() 
+   let date = document.querySelector(".date");
+   date.innerHTML = "Last seen today at " + cdate.getHours() + " : " + cdate.getMinutes() + " : " + cdate.getSeconds()
+ 
+  
+ let opennav = document.getElementById("open")
+ opennav.onclick = function(){
+ let menu = document.getElementById("menu")
+ menu.style.width = "50%";
+ }
+ document.onclick = function(e){
+ if(e.target.id !== "closenav" && e.target.id !== "open"){
+ menu.style.width = "0";
+ }
+ }
+ let close_nav = document.getElementById("closenav");
+ close_nav.onclick = function(){
+ let menu = document.getElementById("menu")
+ menu.style.width = 0;
+ }
+ 
+ let item = document.getElementsByClassName("items")[0];
+ item.onclick = function(){
+ let menu = document.getElementById("menu")
+ menu.style.height = "0px";
+ }
+ let item1 = document.getElementsByClassName("items")[1];
+ item1.onclick = function(){
+ let menu = document.getElementById("menu")
+ menu.style.height = "0px";
+ }
+ 
+ window.onscroll = function(){
+ let profile_img = document.querySelector(".profile img");
+ if(document.body.scrollTop > 350 || document.documentElement.scrollTop > 350){
+  profile_img.style.transform = "scale(0)";
+  }
+  else {
+  profile_img.style.transform = "scale(1)";
+  }
+  }
+  
+ 
+ /*$(document).ready(function() {
+ 
+ 
+ var readURL = function(input) {
+ if (input.files && input.files[0]) {
+ var reader = new FileReader();
+ 
+ reader.onload = function (e) {
+ $('.profile-pic').attr('src', e.target.result);
+ }
+ 
+ reader.readAsDataURL(input.files[0]);
+ }
+ }
+  
+ 
+ $(".file-upload").on('change', function(){
+ readURL(this);
+ });
+ 
+ $(".upload-button").on('click', function() {
+ $(".file-upload").click();
+ });
+ });*/
+ </script>

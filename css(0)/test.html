@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css(0)/all.css">
+<title></title>
+</head>
+<style type="text/css">
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing:border-box;
+}
+   body{
+   height: 100%;
+   width: 100%;
+   }
+  #parent{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  /*justify-content: center;
+  align-items: center;
+  background: red;*/
+  z-index: 1000;
+  position:relative;
+  }
+  #parent .div1{
+  height: 100%;
+  width: 100%;
+  background: #f2f2f2;
+  z-index: 1000;
+  position:absolute;
+  transition: all 0.5s;
+  left: -100%;
+  top: 0;
+  }
+  
+   #parent .times {
+   position:absolute;
+   top: -10px;
+   left: 10px;
+   font-size: 50px;
+  }
+  
+  #parent .div2 {
+  background: ;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  position:absolute;
+  right:0;
+  top: 0;
+  
+  }
+  
+  .div2 .head {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: ;
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  }
+  .div2 .head .bar {
+  right: 10px;
+  position:absolute;
+  top: 10px;
+  font-size: 30px;
+  }
+  
+  
+  .intro{
+  width: 100%; 
+  width: auto;
+  padding: 10px;
+  margin: 50px 0 0 0;
+  }
+  .intro img{
+  width: 200px; 
+  height: 250px;
+  }
+  .intro h1{
+  max-width: 100%;
+  width: 50px;
+  background: ;
+  height: 500px;
+  font-size: 100px;
+  line-height: 120px;
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+  color: white;
+  font-family: cursive;
+  
+  }
+  
+</style>
+<body>
+     <div id="parent">
+     
+     <div class="div1">
+     <span class="times"> &times </span>
+     </div>
+     <div class="div2">
+     
+    <div class="head"> 
+    <h2>My Portfolio</h1>
+    <span class="bar"> <i class="fa fa-bars"></i></span>
+     </div>
+     
+     <section class="intro">
+    <!--<img src="pics.png">-->
+     <h1> Hi am Einstein Bassey</h1>
+     
+     <form action="test.html" >
+     Distance <input type="text" id="distance">
+     Time <input type="text" id="time">
+     <button type="submit" onclick="solve()" id="submit">Solve </button>
+     <p id="solution"> </p>
+     </form>
+     </section>
+     </div>
+</body>
+</html>
+  <script type="text/javascript">
+    let menu = document.querySelector(".div1");
+    let body = document.querySelector(".div2");
+    let times = document.querySelector(".times")
+    times.onclick = () => {
+    menu.style.left = "-100%"
+    body.style.right = "0"
+    }
+    let bar = document.querySelector(".head .bar")
+    bar.onclick = () => {
+    menu.style.left = "0"
+    body.style.right = "-100%"
+    }
+    
+    
+      function solve(){
+      let distance = document.querySelector("#distance");
+      let time = document.querySelector("#time");
+      let soln = document.querySelector("#solution");
+      if(distance.value == "" && time.value ==""){
+      alert("please insert input")
+      }
+      else {
+      let ans = distance.value/time.value;
+      soln.innerHTML= ans;
+      alert(ans)
+      }
+      }
+  </script>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css(0)/all.css">
+    <link rel="shortcut icon" href="tree.jpg" type="image/x-icon">
+    <title>Radial menu</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Young+Serif&display=swap');
+
+     *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", "Inter";
+     }
+     body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #fff;
+        /* background: url("pexels-marcelo-chagas-1876279.jpg")no-repeat;
+        background-size: cover;
+        background-position: center; */
+     }
+     h1 {
+      z-index: 4;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 80px;
+      text-align: center;
+      background: transparent;
+      width: 80%;
+      padding: 5px 10px;
+      border-radius: 30px;
+      box-shadow: 0 0 5px #000;
+      position: relative;
+      height: auto;
+      top: -20px;
+      cursor: default;
+     }
+     h1::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      transition: 0.5s;
+      height: 100%;
+      background-color: black;
+      border-radius: 30px;
+      z-index: -1;
+     }
+     h1:hover::before {
+      width: 100%;
+      color: #fff;
+     }
+     h1 b{
+      color: black; 
+      font-family: cursive;
+      transition: 0.5s;
+      transition-delay: 0.1s;
+     }
+     h1:hover b{
+      color: purple;
+
+     }
+     .bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+     }
+     .container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 400;
+        margin-bottom: 20px;
+        border-radius: 50%;
+     }
+     .container .spinner {
+        position: absolute;
+        z-index: 100;
+        width: 70px;
+        height: 70px;
+        background-color: #000;
+        display: flex;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: bold;
+        border-radius: 50%;
+        transition: 1.25s;
+        cursor: pointer;
+        border: 1px solid #fff;
+     }
+     .click-me{
+      position: absolute;
+      top: -30px;
+      border-radius: 30px 30px 30px 0;
+      left: 50px;
+      font-size: 20px;
+      width: 150px;
+      text-align: center;
+      background-color: #000;
+      color: #fff;
+     }
+     
+     .container li {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        left: 0;
+        transform-origin: 200px;
+        list-style-type: none;
+        background-color: #000;
+        box-shadow: 0 0 5px #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transform: translateX(160px);
+        transition: transform 0.5s;
+        transition-delay: calc(0.1s * var(--i));
+        cursor: pointer;
+     }
+     
+     .container li a {
+        color: #fff;
+        font-size: 40px;
+        transition: 0.5s;
+        transform: rotate(calc(360deg / -8  * var(--i)));
+     }
+    
+     .container.active li{
+        transform: rotate(calc(360deg / 8  * var(--i)));
+     }
+     .container.active li:hover {
+      /* background-color: #90274B; */
+      background-color: hsl(74, 76%, 97%);
+      border: 2px solid black;
+     }
+     .container.active li:hover a{
+      color: #000;
+      animation: spin 0.5s 1;
+     }
+     /* @keyframes spin {
+      from{
+         transform: rotate(0);
+      }
+      to{
+         transform: rotate(360deg);
+      }
+     } */
+     .container.active .spin{
+        transform: translate(30px);
+     }
+     .container.active .spinner {
+        transform: rotate(315deg);
+        color: #000;
+        background: #fff;
+     }
+     @media screen and (max-width: 1097px){
+      h1{
+         font-size: 50px;
+      }
+     }
+    </style>
+</head>
+<body>
+   <img src="tree.jpg"  class="bg-img">
+   <!-- <video autoplay loop mute id="video">
+      <source src="video.mp4" type="video/mp4">
+   </video> -->
+   <h1>Simple <b>radial</b>  menu</h1>
+    <ul class="container">  
+      
+        <div class="spinner">
+         <span class="click-me">
+            Click me
+         </span> 
+           <i class="fa-solid fa-bars"></i>
+        </div>
+        
+        <li class="img" style="--i:0">
+           <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </li>
+        <li class="img" style="--i:1">
+         <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+        </li>
+        <li class="img" style="--i:2">
+         <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li class="img" style="--i:3">
+         <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </li>
+        <li class="img" style="--i:4">
+         <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+        </li>
+        <li class="img" style="--i:5">
+         <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li class="img" style="--i:6">
+         <a href="#"><i class="fa-brands fa-behance"></i></a>
+        </li>
+        <li class="img" style="--i:7">
+         <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </li>
+      </ul>
+</body>
+</html>
+<script>
+    let spinner = document.querySelector(".spinner");
+    let click_btn = document.querySelector(".click-me");
+    let menu = document.querySelector(".container");
+    let bars = document.querySelector(".spinner i");
+    spinner.onclick = function(){
+      click_btn.style.display = "none"
+       menu.classList.toggle("active");   
+       bars.classList.toggle("fa-times");
+    }
+</script>

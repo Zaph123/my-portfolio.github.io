@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css(0)/all.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Young Serif&family=Dela+Gothic+One&family=Perpetua:wght@200;300&family=Verdana:wght@200;300&family=Crimson+Pro:wght@200;300&family=Poppins:wght@300&family=Trirong:wght@300&display=swap');
+  
+   *{
+   padding: 0;
+   margin: 0;
+   box-sizing:border-box;
+   font-family: "Young Serif", "perpetua", times;
+   font-weight: bold;
+   }
+   html{
+   scroll-behavior: smooth;
+   }
+   body {
+   background: #fff;
+   animation: scale 0.5s;
+   animation-iteration-count: 1;
+   transition: 0.5s;
+   }
+   @keyframes scale {
+   0%{
+   transform: scale(1.2);
+   }
+   100%{
+   transform: scale(1);
+   }
+   }
+   header{
+   position:relative;
+   }
+   .head {
+   padding: 10px;
+   z-index: 1;
+   height: 400px;
+   }
+   .head h3 {
+   text-transform:capitalize;
+   color: white;
+   }
+   .head h1{
+   font-size: 60px;
+   text-transform:uppercase;
+   width: 100%;
+   text-align: left;
+   background: ;
+   padding: 10px;
+   color: #fff;
+   }
+   
+   .head #bgimg {
+   position:absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: -1;
+   object-fit: cover;
+   
+   }
+  header h2{
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  padding:10px;
+  text-transform:uppercase;
+  background: rgba(0,0,0,0.5);
+  box-shadow: 0 5px 5px black;
+ /* position:absolute;
+  right: 10px;
+  top: 10px;
+  transform:translate(110px,120px) rotate(90deg);*/
+  }
+  
+  .head #menu {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 300px;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0 0 0;
+  justify-content: ;
+  align-items: center;
+  display: ;
+  z-index: 100;
+  overflow: hidden;
+  transition: 0.5s;
+  }
+  #menu span {
+  position:absolute;
+  top: 5px;
+  left: 30px;
+  font-size: 50px;
+  z-index: 30;
+  color: #fff;
+  }
+  #menu a {
+  text-decoration: none;
+  color: #fff;
+  width: 60%;
+  text-align: center;
+  padding: 15px 10px;
+  border: ;
+  }
+  
+  .head .fa-bars {
+   color: #fff;
+   font-size: 30px;
+   padding: 10px;
+   background: black;
+   box-shadow:;
+   border-radius: 10px;
+  }
+   main {
+   height: auto;
+   width: 100%;
+   background: ;
+   padding: 10px 0;
+   }
+  
+   .about {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px 10px 30px 10px;
+   background: #232528;
+   margin: 0 auto;
+   border-radius: 20px;
+   width: 350px;
+   box-shadow: 0 5px 10px black;
+   position:relative;
+   z-index: 1;
+   }
+   .about .circle {
+   height: 100px;
+   width: 100px;
+   border-radius: 50%;
+   position:absolute;
+   bottom: 0;
+   left: 0;
+   background: #fb7000;
+   z-index: -1;
+   }
+   .about .svg {
+   z-index: 1;
+   }
+   .about .svg .container{
+   position:absolute;
+   height: 130px;
+   background: ;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: space-between;
+   transform:translate(-50px,40px) rotate(-20deg);
+   z-index: -1;
+   }
+   .about .svg .face{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: url("images.png");
+    background-size: cover;
+   }
+   .about .svg .container .span{
+   height: 30px;
+   width: ;
+   background: #000;
+   position:relative;
+   border-radius: 50px;
+   }
+   .about .svg .container .span.one {
+   width: 230px;
+   }
+   .about .svg .container .span.two {
+   width: 300px;
+   }
+   .about .svg .container .span.three{
+   width: 240px;
+   }
+   .about .info {
+   width: 100%;
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   }
+   .about .info span {
+   color: #fff;
+   display: inline-block;
+   box-shadow: 0 3px 3px #fb7000;
+   padding: 10px;
+   border-radius: 10px;
+   text-transform:capitalize;
+   background: #000;
+   }
+   .about .info hr {
+   height: 2px;
+   width: 60px;
+   transform: rotate(90deg);
+   border: 1px solid #fb7000;
+   box-shadow: none;
+   border-radius: 10px;
+   }
+   .about h1 {
+   color: #fff;
+   text-transform:capitalize;
+   text-align: center;
+   padding: 10px 0;
+   }
+    .card_container {
+    height: 700px;
+    width: 100%;
+    padding: 30px 10px;
+    background: ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    .card_container img {
+    height: 500px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px black;
+    }
+    /*.card_container .card {
+     height: 600px;
+     width: 100%;
+     background: black;
+     position: relative;
+     color: white;
+     padding: ;
+     border-radius: 10px;
+     box-shadow: 0 3px 5px black;
+    }*/
+    .card_container .card .card-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #0d0d0d;
+    position:absolute;
+    box-shadow: 0 0px 5px rgba(255,255,255,0.2);
+    }
+    .card_container .card .card-circle:nth-child(1){
+    bottom: 0px;
+    right: 0px;
+    } 
+   /* .card_container .card h1 {
+    transform: translate(100px,190px) rotate(90deg);
+    font-size: 40px;
+    text-transform:uppercase;
+    text-align:center;
+    }
+    .card_container .card h2 {
+    transform: translate(-10px,130px) rotate(90deg);
+    font-size: 30px;
+    text-transform:uppercase;
+    text-align:center;
+    background: ;
+    
+    }
+  
+    .card_container .card .code{
+     transform: translate(-150px,230px) rotate(90deg);
+     font-size: 25px;
+    }*/
+    .card_container .message {
+    color: black;
+    /*transform: translateY(220%) rotate(90deg);*/
+    text-align: center;
+    margin-bottom: 10px;
+    }
+    .card_container a {
+    position:;
+    }
+   footer {
+   height:600px;
+   width: 100%;
+   background: url("dark.jpg")no-repeat;
+   background-size: cover;
+   background-position: center;
+   color: #fff;
+   padding: 10px;
+   position:relative;
+   }
+   footer #foot_h1{
+   text-align: center;
+   transform:translateY(20px);
+   transition: 0.5s;
+   opacity: 0;
+   font-size: 40px;
+   
+   }
+   footer .question {
+   padding: 10px 0;
+   line-height: 60px;
+   }
+   .question h3 {
+   font-size: 25px;
+   transform:translateY(20px);
+   transition: 0.5s;
+   opacity: 0;
+   }
+   .question p {
+   font-size: 19px;
+   transform:translateY(20px);
+   transition: 0.5s;
+   opacity: 0;
+   }
+   footer .question form {
+   width: 90%; 
+   height: 250px;
+   line-height: 80px;
+   padding: 10px 10px;
+   box-shadow: 0 0px 5px rgba(255,255,255,0.2);
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   margin: 0 auto;
+   opacity: 0;
+   transition: 0.5s;
+   transform:translateY(20px);
+   transition-delay: ;
+   }
+   footer .question form input {
+   width: 240px;
+   height: 50px;
+   opacity: 0.5;
+   border-radius: 10px;
+   border: none;
+   padding: 10px 5px;
+   outline: none;
+   }
+   ::placeholder {
+   color: black;
+   }
+   footer .question form textarea {
+   height: 100px;
+   overflow: auto;
+   width: 240px;
+   opacity: 0.5;
+   border-radius: 10px;
+   border: none;
+   padding: 10px 5px;
+   outline: none;
+   }
+   
+   footer .question form input[type="submit"]{
+   background: #fb7000;
+   opacity: 1;
+   color: white;
+   position:relative;
+   height:;
+   left: -70px;
+   width: 100px;
+   }
+   
+   .mediaicons {
+   width: 100%;
+   max-width: 500px;
+   margin: 0 auto;
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   position:relative;
+   top: 20px;
+   }
+ .mediaicons .fa-brands {
+ font-size: 25px;
+ transition: all 0.5s;
+ } 
+ 
+ .mediaicons .fa-brands:hover {
+ padding: 10px;
+ background: rgba(255,255,255,0.2);
+ transform: scale(1.02);
+ transition: 0.5s;
+ border-radius: 10px;
+ }
+   .copyrights {
+   position:absolute;
+   bottom: 10px;
+   font-size: 20px;
+   text-align: center;
+   left: 0;
+   right: 0;
+   }
+   #topp{
+   z-index: 1000;
+   bottom: 100px;
+   position: fixed;
+   right: 10px;
+   font-size: 35px;
+   background: black;
+   padding: 10px;
+   border-radius: 10px;
+   color: #fff;
+   opacity: 0;
+   transition: 0.5s;
+   }
+   #bott {
+   z-index: 1000;
+   top: 100px;
+   position: fixed;
+   right: 0px;
+   font-size: 35px;
+   background: black;
+   padding: 10px;
+   border-radius: 10px;
+   color: #fff;
+   opacity: 1;
+   transition: 0.5s;
+   }
+   .fun {
+   height: 400px;
+   width: 100%;
+   background: #000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: ;
+   }
+   .fun h1{
+   color: #fff;
+   }
+   .fun .parent{
+   height: 300px;
+   width: 100%;
+   background: #fff;
+   display: flex;
+   overflow: auto;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   align-items: center;
+   }
+   .fun .parent .container{
+   flex-shrink: 0;
+   height: 300px;
+   width: 300px;
+   background: ;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /*border: 2px solid black;*/
+   }
+   .fun .container .child{
+   width: 250px;
+   height: 250px;
+   border-radius: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   position:relative;
+   z-index: 1;
+   }
+  .fun .container .child img{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+  }
+  .head #profile{
+  position:absolute;
+  top: 10px;
+  right: 30px;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 50%;
+  }
+   </style>
+   </head>
+<body>
+    <a href="#top" id="topp"><i class="fa-solid fa-angle-up"></i></a>
+    <a href="#rights" id="bott"><i class="fa-solid fa-angle-down"></i></a>
+   <header  id="header" >
+   <div class="head">
+   <a href="profile.html" ><i class="fa-solid fa-user" id="profile"></i></a>
+   <div id="menu">
+   <span id="closenav">&times</span>
+   <a href="index(1).html" class="items" >Home</a>
+   <a href="index(1).html" class="items">Log out</a>
+   <a href="dashboard.html" class="items"> Dashboard</a>
+    <a href="signup.html" class="items"> Signup</a>
+   </div>
+   <img src="legs.jpg" id="bgimg">
+   <h3>Welcome to</h3>
+   <h1> Fans based Team </h1>
+    <i class="fa-solid fa-bars" id="open"></i>
+   </div>
+   <h2> Your Dashboard</h2>
+   </header>
+   <main>
+   
+   <div class="about">
+   
+   <div class="svg">
+   <div class="container">
+   <div class="span one"></div>
+   <div class="span two"></div>
+   <div class="span three"></div>
+   </div>
+    <div class="face"></div>
+    </div>
+    <h1>Welcome Einstein</h1>
+   <div class="info"> <a href="profile.html" ><span class="view_profile">view profile</span></a>
+   <hr>
+   <a href="https://wa.me/2349022761407?text=Hello%20can%20I%20get%20my%20coupon%20code" ><span class="access_pin">Get Coupon</span></a>
+    </div>
+   </div>
+   
+   <section class="card_container" >
+   <div class="message">
+   <h1>Congratulation!!</h1>
+   <p>You have been rewarded with a Fan access card
+   </p>
+   
+   </div>
+    <img src="card.png">
+    <a href="card.png" target="_blank" download="card" >click</a>
+   <!--<div class="card" id="printableArea">
+   <div class="card-circle" ></div>
+   <div class="card-circle" ></div>
+   <h1> Fans based Team</h1>
+    <h2>Fan Card</h2>
+      <div class="code">Coupon code: 00001</div>
+  
+   </div>-->
+   <!--<input type="button" onclick="printDiv('printableArea')" value="print a div!" />
+   <button onclick="download()">Click To Download</button>
+   -->
+   </section>
+   </main>
+   <!-- <div id="printableArea">
+    <h1>Print me</h1>
+    </div>
+    
+    <input type="button" onclick="printDiv('printableArea')" value="print a div!" />
+    -->
+    <section class="fun">
+    <h1>Get busy, Explore</h1>
+    <div class="parent">
+    <div class="container">
+    <div class="child music">
+     <p> music trends</p>
+     <img src="headphone.jpg">
+    </div>
+    </div>
+    <div class="container">
+    <div class="child trends">
+    <img src="relax.jpg">
+    <p> music trends</p>
+    </div>
+    </div>
+    <div class="container">
+    <div class="child news">
+    <img src="bulb.jpg">
+    <p> music trends</p>
+    </div>
+    </div>
+    </div>
+    </section>
+  <footer>
+  <h1 id="foot_h1">Fan Based Team</h1>
+  <div class="question">
+  <h3 id="quest_h3" >Do you have any question?</h2>
+  <p id="quest_p">Give us a message</p>
+  <form action="" id="disappear">
+  <input type="email" id="email" placeholder="example@gmail.com" required="required" >
+  <textarea name="comment" rows="4" cols="50" placeholder="Enter message..." required="required" ></textarea>
+  <input type="submit" value="Submit">
+  </form>
+  </div>
+  <div class="mediaicons">
+  <a href="https://www.facebook.com/profile.php?id=100093492969176" ><i class="fa-brands fa-facebook"></i></a>
+ <a href="https://wa.me/2349022761407?text=Hello%20can%20I%20get%20my%20coupon%20code" > <i class="fa-brands fa-whatsapp"></i></a>
+  
+  <i class="fa-brands fa-instagram"></i>
+ <a href="https://vm.tiktok.com/ZMjfmNqoE/" > <i class="fa-brands fa-tiktok"></i></a>
+  </div>
+  <div class="copyrights" id="rights">copyrights©2023</div>
+  </footer> 
+</body>
+</html>
+<script type="text/javascript">
+
+    let opennav = document.getElementById("open")
+    opennav.onclick = function(){
+    let menu = document.getElementById("menu")
+    menu.style.width = "50%";
+    }
+    document.onclick = function(e){
+    if(e.target.id !== "closenav" && e.target.id !== "open"){
+    menu.style.width = "0";
+    }
+    }
+    let close_nav = document.getElementById("closenav");
+    close_nav.onclick = function(){
+    let menu = document.getElementById("menu")
+    menu.style.width = 0;
+    }
+    
+    let item = document.getElementsByClassName("items")[0];
+    item.onclick = function(){
+    let menu = document.getElementById("menu")
+    menu.style.height = "0px";
+    }
+    let item1 = document.getElementsByClassName("items")[1];
+    item1.onclick = function(){
+    let menu = document.getElementById("menu")
+    menu.style.height = "0px";
+    }
+    
+    
+    function printDiv(divName) {
+    var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
+    
+    document.body.innerHTML = printContents;
+    
+    window.print();
+    
+    document.body.innerHTML = originalContents;
+    }
+    
+   
+    function download() {
+    var a = document.body.appendChild(
+    document.createElement("a")
+    );
+    a.download = "newfile.html";
+    a.href = "data:text/html," + document.getElementById("content").innerHTML;
+    a.click(); //Trigger a click on the element
+    }
+    let dis_app = document.querySelector("#disappear");
+    let dis_app1 = document.querySelector("#foot_h1");
+    let qh3 = document.querySelector("#quest_h3");
+    let qp= document.querySelector("#quest_p");
+    window.addEventListener("scroll", () => {
+    if(document.body.scrollTop > 900|| document.documentElement.scrollTop > 900){
+    dis_app.style.opacity = 1;
+    dis_app.style.transform = "translateY(0)";
+    dis_app1.style.transform = "translateY(0)";
+    dis_app1.style.opacity = 1;
+    dis_app1.style.transitionDelay = "0s";
+    dis_app.style.transitionDelay = "0.3s";
+    qh3.style.transitionDelay = "0.1s";
+    qp.style.transitionDelay = "0.2s";
+    qh3.style.opacity = 1;
+    qp.style.opacity = 1;
+    qh3.style.transform = "translateY(0)";
+    qp.style.transform = "translate(0)"
+    }
+    /* else if(document.body.scrollTop > 700 || document.documentElement.scrollTop > 700){
+    dis_app1.style.transform = "translateY(0)";
+    dis_app1.style.opacity = 1;
+    dis_app1.style.transitionDelay = 0;
+    }*/
+    else{
+    dis_app.style.opacity = 0;
+    dis_app.style.transform = "translateY(20px)";
+    dis_app1.style.transform = "translateY(20px)";
+    dis_app1.style.opacity = 0;
+    dis_app1.style.transitionDelay = "0.3s";
+    dis_app.style.transitionDelay = "0s";
+    qh3.style.transitionDelay = "0.2s";
+    qp.style.transitionDelay = "0.1s";
+    qh3.style.transform = "translateY(20px)";
+    qp.style.transform = "translateY(20px)";
+    qh3.style.opacity = 0;
+    qp.style.opacity = 0;
+    }
+    })
+    
+    let toppage = document.getElementById("topp");
+    let botpage = document.getElementById("bott");
+    window.addEventListener("scroll", function() {
+    if(document.body.scrollTop > 800 || document.documentElement.scrollTop > 800){
+    toppage.style.opacity = 1;
+    botpage.style.opacity = 0
+    }
+    else{
+    toppage.style.opacity = 0;
+    botpage.style.opacity = 1
+    }
+    })
+    
+    window.addEventListener("scroll", function() {
+    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+    botpage.style.opacity = 0;
+    }
+    else{
+    botpage.style.opacity = 1 ;
+    }
+    })
+    
+    $(document).ready(function(){
+     $("#open").click(function(){
+      $("#menu").css("width", "60%")
+     })
+    })
+    
+</script>

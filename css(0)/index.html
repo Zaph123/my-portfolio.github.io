@@ -1,0 +1,280 @@
+<!--<?php
+   require_once "includes/config_session.inc.php";
+   require_once "includes/login_view.inc.php";
+   ?>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="2; URL=index(1).html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fan Based Team</title>
+  <link rel="stylesheet" href="css(0)/all.css">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+<a href="#top" id="topp"><i class="fa-solid fa-angle-up"></i></a>
+   <a href="#rights" id="bott"><i class="fa-solid fa-angle-down"></i></a>
+   <header id="header">
+   <div class="head">
+   <div id="menu">
+   <span id="closenav">&times</span>
+    <a href="index.php" class="items" >Home</a>
+    <a href="#form" class="items">Log in</a>
+    <a href="signup.php" class="items"> Dashboard</a>
+     <a href="signup.php" class="items"> Signup</a>
+   </div>
+  <div class="calls">
+  <a href="signup.php" class="calltoaction"> Signup</a>
+  <i class="fa-solid fa-bars" id="open"></i></div>
+  <div class="slides">
+    <img src="head.jpg" alt="slides" class="myslides">
+    <img src="headphone2.jpg" alt="slides" class="myslides">
+    <img src="relax.jpg" alt="slides" class="myslides">
+    <img src="bulb.jpg" alt="slides" class="myslides">
+   </div>
+   <h3>Welcome to</h3>
+   <h1> Fans based Team </h1>
+   <a href="#form" id="loglink">
+    <div class="log">
+      <div class="link_items">
+        <p>login</p>
+        <i class="fa-solid fa-angle-down fa-beat"></i>
+      </div>
+    </div>
+   </a>
+   </div>
+   </header>
+   
+   <main>
+   <div class="content">
+   <p> Welcome to The Fans based Team, your home of unlimited
+    Entertainment,Music and Trends all around you</p><br>
+    
+   <img src="guitar.jpg"><br><br>
+    <a href="signup.php" id="signup"><p> Sign up now to get the latest info's <i class="fa-solid fa-angle-down"></i></a>
+    </p>
+    
+   </div>
+   <div class="form">
+   <h1>Sign in here </h1>
+   <div class="signin_img"><img src="signin.jpg"></div>
+   <!--<?php
+    check_login_errors();
+   ?>-->
+   <form action="includes/login.inc.php" id="form" method="post">
+
+    <label for="uid">Username:</label>
+    <input type="text" id="uid" placeholder="Username"  name="username">
+    <label for="pass">Password:</label>
+    <div class="passwd-cont"><input type="password" id="pass" placeholder="........"  name="pwd"> <span id="boss"><i class="fa-solid fa-eye" id="eye"></i></span></div><br>
+    <input type="submit" value="Log in" id="sub" onclick="gate()"><br>
+    <p>Don't have an account?<br>
+     <a id="mode" href="signup.php">Sign Up </a>here</p><br>
+    
+   </form>
+   </div>
+   
+   <p id="p"> </p>
+   </main>
+   
+   
+  
+   
+   
+   <footer>
+   <h1 id="foot_h1">Fan Based Team</h1>
+   <div class="question">
+   <h3 id="quest_h3" >Do you have any question?</h2>
+   <p id="quest_p">Give us a message</p>
+   <form action="includes/comments.inc.php" id="disappear" method="post">
+   <input type="email" id="email" placeholder="example@gmail.com" name="email">
+   <textarea name="comment" rows="4" cols="50" placeholder="Enter message..."></textarea>
+   <input type="submit" value="Submit">
+   </form>
+   </div>
+   <div class="mediaicons">
+   <i class="fa-brands fa-facebook"></i>
+   <i class="fa-brands fa-whatsapp"></i>
+   <i class="fa-brands fa-instagram"></i>
+   <i class="fa-brands fa-tiktok"></i>
+   </div>
+   <div class="copyrights" id="rights">copyrights©2023</div>
+   </footer> 
+</body>
+</html>
+<script type="text/javascript">
+
+ let x = document.getElementById("sub");
+  x.onclick = function(){
+  let y = document.getElementById("uid").value;
+  let z = document.getElementById("pass").value;
+  let inner = document.getElementById("p")
+  if(y == ""){
+  alert("please fill in the feilds")
+  }
+  else {
+  alert("Thanks") 
+  }
+  /*if(z == ""){
+  alert("please fill in the feilds")
+  }
+  else {
+  alert("Thanks") 
+  }*/
+  
+  inner.innerHTML = y
+  
+  }
+  
+  window.onscroll = function(){
+  let appear = document.getElementById("form")
+  let head = document.getElementById("header")
+  if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+   appear.style.visibility = "visible"
+   appear.style.opacity= 1;
+   appear.style.transition = "0.5s";
+   appear.style.left = 0;
+   head.style.opacity= 1;
+   }
+   else {
+   appear.style.visibility = "hidden"
+   appear.style.opacity = 0.5;
+   appear.style.transition= "0.5s";
+   appear.style.left = "400px";
+   head.style.visibility = 1;
+   }
+   }
+   
+  /* let link = document.getElementById("mode")
+   link.onclick = function(){
+    let modal = document.getElementById("otherforms")
+    modal.style.left = "0px";
+    
+   }
+   let close = document.getElementById("close")
+   close.addEventListener("click", function(){
+   let modal = document.getElementById("otherforms")
+   modal.style.left = "-100%";
+   })*/
+   let opennav = document.getElementById("open")
+   opennav.onclick = function(){
+   let menu = document.getElementById("menu")
+   menu.style.height = "250px";
+   }
+   
+   let close_nav = document.getElementById("closenav");
+   close_nav.onclick = function(){
+    let menu = document.getElementById("menu")
+    menu.style.height = "0px";
+   }
+   
+   let item = document.getElementsByClassName("items")[0];
+   item.onclick = function(){
+   let menu = document.getElementById("menu")
+   menu.style.height = "0px";
+   }
+   let item1 = document.getElementsByClassName("items")[1];
+   item1.onclick = function(){
+   let menu = document.getElementById("menu")
+   menu.style.height = "0px";
+   }
+   
+   const passwd  = document.getElementById("pass");
+   const eye = document.getElementById("eye");
+   const boss = document.getElementById("boss")
+   boss.addEventListener("click", () => {
+   /* passwd.type = passwd.type === "password" ? "text" : "password";
+    
+    this.classList.toggle("fa-eye")*/
+    if(passwd.type === "password"){
+     passwd.type = "text";
+     eye.setAttribute("class", "fa-solid fa-eye-slash")
+    }
+    else{
+    passwd.type = "password"
+     eye.setAttribute("class", "fa-solid fa-eye")
+    }
+   })
+   
+   let dis_app = document.querySelector("#disappear");
+   let dis_app1 = document.querySelector("#foot_h1");
+   let qh3 = document.querySelector("#quest_h3");
+   let qp= document.querySelector("#quest_p");
+   window.addEventListener("scroll", () => {
+    if(document.body.scrollTop > 900|| document.documentElement.scrollTop > 900){
+     dis_app.style.opacity = 1;
+     dis_app.style.transform = "translateY(0)";
+     dis_app1.style.transform = "translateY(0)";
+     dis_app1.style.opacity = 1;
+     dis_app1.style.transitionDelay = "0s";
+     dis_app.style.transitionDelay = "0.3s";
+     qh3.style.transitionDelay = "0.1s";
+     qp.style.transitionDelay = "0.2s";
+     qh3.style.opacity = 1;
+     qp.style.opacity = 1;
+     qh3.style.transform = "translateY(0)";
+     qp.style.transform = "translate(0)"
+    }
+  /* else if(document.body.scrollTop > 700 || document.documentElement.scrollTop > 700){
+      dis_app1.style.transform = "translateY(0)";
+      dis_app1.style.opacity = 1;
+      dis_app1.style.transitionDelay = 0;
+    }*/
+   else{
+     dis_app.style.opacity = 0;
+     dis_app.style.transform = "translateY(20px)";
+     dis_app1.style.transform = "translateY(20px)";
+     dis_app1.style.opacity = 0;
+     dis_app1.style.transitionDelay = "0.3s";
+     dis_app.style.transitionDelay = "0s";
+     qh3.style.transitionDelay = "0.2s";
+     qp.style.transitionDelay = "0.1s";
+     qh3.style.transform = "translateY(20px)";
+     qp.style.transform = "translateY(20px)";
+     qh3.style.opacity = 0;
+     qp.style.opacity = 0;
+    }
+   })
+    
+    let toppage = document.getElementById("topp");
+    let botpage = document.getElementById("bott");
+    window.addEventListener("scroll", function() {
+    if(document.body.scrollTop > 800 || document.documentElement.scrollTop > 800){
+    toppage.style.opacity = 1;
+    }
+    else{
+    toppage.style.opacity = 0;
+    }
+    })
+    
+    window.addEventListener("scroll", function() {
+    if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
+    botpage.style.opacity = 0;
+    }
+    else{
+    botpage.style.opacity = 1;
+    }
+    })
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("myslides");
+      for (i = 0; i < slides.length; i++){
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length){
+        slideIndex = 1;
+      }
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 5000);
+    }
+</script> 
